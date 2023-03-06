@@ -6,9 +6,9 @@ USER root
 RUN apk update && apk add --no-cache supervisor wget unzip curl
 
 # 定义 UUID 及 伪装路径,请自行修改.(注意:伪装路径以 / 符号开始,为避免不必要的麻烦,请不要使用特殊符号.)
-ENV UUID de04add9-5c68-8bab-950c-08cd5320df18
-ENV VMESS_WSPATH /vmess
-ENV VLESS_WSPATH /vless
+ENV UUID 2dc5d2b8-3c9c-468a-9a77-fc28e8c1220f
+ENV VMESS_WSPATH /2dc5d2b8-3c9c-468a-9a77-fc28e8c1220f-vmess
+ENV VLESS_WSPATH /2dc5d2b8-3c9c-468a-9a77-fc28e8c1220f-vless
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY nginx.conf /etc/nginx/nginx.conf
